@@ -1,0 +1,182 @@
+body {
+  background-color: #f6f6f6;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  width: 100%;
+  height: 636px;
+  align-content: center;
+}
+
+.back {
+  background-color: rgb(214, 86, 86);
+  justify-self: center;
+  /* align-items: center; */
+  margin: 0;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 20px; */
+  text-align: center;
+  /* height: 300px; */
+  width: 50%;
+  border-radius: 10px;
+}
+.back2 {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-self: center;
+  /* height: 150px; */
+  padding: 10px;
+  gap: 11px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: larger;
+  align-items: center;
+  justify-content: center;
+}
+.back3 {
+  /* background-color: #f6f6f6; */
+  width: 70%;
+  justify-self: center;
+  /* height: 150px; */
+  text-align: center;
+  border-radius: 10px;
+  font-size: larger;
+  padding: 10px;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.full {
+  width: 75%;
+  justify-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div > h1 {
+  color: white;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+#input {
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  background-color: #9b484841;
+  padding: 5px;
+}
+
+ #input2 {
+  width: 20%;
+  /* height: 30px; */
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  background-color: transparent;
+  /* padding: 5px; */
+}
+
+/* #input2:hover {
+  background-color: transparent;
+  width: 20%;
+
+} */
+
+#input:focus , #input2:focus {
+  outline: none;
+  color: #2d107c;
+  cursor: text;
+}
+#input:focus::placeholder , #input2:focus::placeholder {
+  color: transparent;
+}
+#save-btn {
+  width: 20%;
+  /* height: 30px;/ */
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  background-color: rgba(53, 97, 53, 0.144);
+  color: white;
+}
+#add-btn {
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  background-color: rgb(214, 86, 86);
+  color: white;
+}
+#add-btn:hover , #save-btn:hover {
+  background-color: rgb(175, 146, 146);
+  color: white;
+  cursor: pointer;
+}
+#add-btn:active , #save-btn:active {
+  background-color: rgb(214, 86, 86);
+  color: white;
+}
+#task-list {
+  display: inline-flex;
+  gap: 30px;
+  list-style-type: none;
+  /* gap: 10px; */
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-item {
+  /* background-color: rgb(140, 96, 96); */
+  /* padding: 10px; */
+  border-radius: 5px;
+  display: inline-flex;
+  /* gap: 150px; */
+  align-items: center;
+  justify-content: space-around;
+}
+
+input[type="button"] {
+  background-color: rgba(53, 97, 53, 0.178);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+input[type="button"]:hover {
+  background-color: rgba(53, 97, 53, 0.5);
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  float: left;
+}
+
+p{
+  font-size: small;
+  width: max-content;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: darkolivegreen;
+  color: #faf7f7;
+}
