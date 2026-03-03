@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-list</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="back">
+        <div class="full">
+          <div><h1>To Do List</h1></div>
+          <div class="back2">
+            <input
+              type="text"
+              id="input"
+              placeholder="Add a new task..."
+              value=""
+            />
+            <button id="add-btn" onclick="AddTask()">Create Task</button>
+            <div class="task-item">
+              <div style="width: max-content">
+                <p style="margin: 0" id="output"></p>
+              </div>
+            </div>
+          </div>
+          <div class="back3">
+            <div id="task-list">
+              <div class="buttons">
+                <input type="button" onclick="Clear()" value="Delete" />
+                <input type="button" onclick="Edit()" value="Edit" />
+              </div>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="input2"
+                value=""
+              />
+              <button id="save-btn" onclick="Save()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
