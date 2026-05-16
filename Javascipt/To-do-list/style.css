@@ -39,7 +39,7 @@ body {
   gap: 20px;
 }
 
-div>h1 {
+div > h1 {
   color: white;
   font-size: 42px;
   padding: 10px;
@@ -179,7 +179,7 @@ p {
     box-shadow: none;
   }
 
-  div>h1 {
+  div > h1 {
     font-size: 34px;
   }
 
@@ -206,7 +206,7 @@ p {
     padding: 60px;
   }
 
-  div>h1 {
+  div > h1 {
     font-size: 80px;
   }
 
