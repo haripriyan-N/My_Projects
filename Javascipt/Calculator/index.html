@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator UI</title>
+  <style>
+    body {
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      width: 280px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .display {
+      background: #000;
+      color: #fff;
+      font-size: 28px;
+      text-align: right;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 18px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .number {
+      background: #333;
+      color: white;
+    }
+
+    .operator {
+      background: #ff9500;
+      color: white;
+    }
+
+    .equal {
+      background: #28a745;
+      color: white;
+      grid-column: span 2;
+    }
+
+    .clear {
+      background: #dc3545;
+      color: white;
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display" id="Show">0</div>
+
+    <div class="buttons">
+      <button class="clear" onclick="clearDisplay()">C</button>
+      <button class="operator" onclick="operator('/')">/</button>
+      <button class="operator" onclick="operator('*')">*</button>
+
+      <button class="number" onclick="num(7)">7</button>
+      <button class="number" onclick="num(8)">8</button>
+      <button class="number" onclick="num(9)">9</button>
+      <button class="operator" onclick="operator('-')">-</button>
+
+      <button class="number" onclick="num(4)">4</button>
+      <button class="number" onclick="num(5)">5</button>
+      <button class="number" onclick="num(6)">6</button>
+      <button class="operator" onclick="operator('+')">+</button>
+
+      <button class="number" onclick="num(1)">1</button>
+      <button class="number" onclick="num(2)">2</button>
+      <button class="number" onclick="num(3)">3</button>
+      <button class="number" onclick="num(0)">0</button>
+
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+<script src="./script.js" ></script>
+</body>
+</html>
