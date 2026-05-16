@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 try {
   function AddTask() {
     const print = document.getElementById("input").value;
