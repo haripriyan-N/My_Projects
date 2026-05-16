@@ -6,93 +6,68 @@
 
 body {
   background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   font-family: Georgia, "Times New Roman", serif;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 .container {
-  display: grid;
   width: 100%;
-  min-height: 100vh;
-  align-content: center;
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .back {
   background-color: #8b5e5e;
-  width: 50%;
+  width: 95%;
+  max-width: 700px;
   min-height: 500px;
-  justify-self: center;
   text-align: center;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div>h1 {
+  color: white;
+  font-size: 42px;
+  padding: 10px;
+  font-weight: normal;
 }
 
 .back2,
 .back3 {
   background-color: #ffffff;
-  width: 70%;
-  justify-self: center;
+  width: 100%;
   border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  font-size: large;
+  padding: 20px;
   border: 1px solid #ddd;
 }
 
 .back2 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+  gap: 15px;
 }
 
-.table {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.full {
-  width: 75%;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-div>h1 {
-  color: white;
-  font-size: 42px;
-  margin: 0;
-  padding: 10px;
-  font-weight: normal;
-}
-
-#input {
-  width: 80%;
-  height: 35px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-top: 20px;
-  padding: 5px 10px;
-  background-color: #fff;
-  font-family: inherit;
-}
-
+#input,
 #input2 {
-  width: 20%;
+  width: 100%;
+  height: 42px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  margin-top: 20px;
-  background-color: #fff;
-  padding: 5px;
+  padding: 10px;
   font-family: inherit;
 }
 
@@ -107,27 +82,24 @@ div>h1 {
   color: transparent;
 }
 
-#save-btn,
-#add-btn {
+#add-btn,
+#save-btn {
+  width: 100%;
+  min-height: 42px;
   border-radius: 5px;
   border: none;
-  margin-top: 20px;
   color: white;
   cursor: pointer;
   font-family: inherit;
   transition: 0.3s;
 }
 
-#save-btn {
-  width: 20%;
-  padding: 8px;
-  background-color: #5b7c5b;
+#add-btn {
+  background-color: #8b5e5e;
 }
 
-#add-btn {
-  width: 80%;
-  height: 35px;
-  background-color: #8b5e5e;
+#save-btn {
+  background-color: #5b7c5b;
 }
 
 #add-btn:hover,
@@ -140,34 +112,39 @@ div>h1 {
   transform: scale(0.98);
 }
 
-#task-list {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .task-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 input[type="button"] {
+  flex: 1;
+  min-height: 42px;
   background-color: #8b5e5e;
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -176,117 +153,73 @@ input[type="button"]:hover {
   background-color: #5b7c5b;
 }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-}
-
 p {
-  font-size: small;
-  width: max-content;
-  padding: 5px 10px;
+  width: 100%;
+  padding: 10px;
   border-radius: 5px;
   background-color: #5b7c5b;
   color: white;
+  word-break: break-word;
+  text-align: center;
 }
 
+/* MOBILE */
 
+@media (max-width: 425px) {
 
-@media (min-width: 2560px) {
-  * {
-    font-size: 30px
+  body {
+    background-color: #8b5e5e;
+    padding: 10px;
   }
 
   .back {
-    padding: 100px;
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
 
+  div>h1 {
+    font-size: 34px;
+  }
+
+  .back2,
+  .back3 {
+    padding: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  input[type="button"] {
+    width: 100%;
+  }
+}
+
+/* LARGE SCREEN */
+
+@media (min-width: 2560px) {
+
+  .back {
+    max-width: 1000px;
+    padding: 60px;
   }
 
   div>h1 {
     font-size: 80px;
   }
 
-  #input {
-    padding: 15px;
-  }
-
-  #add-btn {
-    height: 75px;
-  }
-
-  p {
-    font-size: 25px;
-    border-bottom: 2px solid black;
-  }
-
-  input[type="button"] {
-    padding: 15px 30px;
-  }
-
-  #save-btn {
-    padding: 10px;
-  }
-
-  #input2 {
-    width: 30%;
-  }
-}
-
-@media (max-width: 425px) {
-
-  body {
-    background-color: #8b5e5e;
-  }
-
-  .container {
-    padding: 0;
-  }
-
-  .back {
-    width: 100%;
-    padding: 20px 10px;
-    box-shadow: none;
-    border-radius: 0;
-  }
-
-  .back2,
-  .back3 {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .full {
-    width: 100%;
-  }
-
-  .table {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   #input,
   #input2,
   #add-btn,
-  #save-btn {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #task-list {
-    flex-direction: column;
-  }
-
-  div>h1 {
-    font-size: 32px;
-  }
-
+  #save-btn,
   input[type="button"] {
-    padding: 10px;
+    min-height: 70px;
+    font-size: 28px;
   }
-}
-* {
-  outline: 1px solid red;
-}
-body {
-  overflow-x: hidden;
+
+  p {
+    font-size: 28px;
+  }
 }
