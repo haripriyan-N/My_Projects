@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f4f4f4;
   margin: 0;
@@ -228,12 +234,6 @@ p {
 
 @media (max-width: 425px) {
 
-  .back {
-    width: 100%;
-    box-shadow: none;
-    padding: 0;
-  }
-
   body {
     background-color: #8b5e5e;
   }
@@ -241,33 +241,46 @@ p {
   .container {
     padding: 0;
   }
-}
 
-@media (min-width: 320px) {
-  div>h1 {
-    font-size: 35px;
+  .back {
+    width: 100%;
+    padding: 20px 10px;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   .back2,
   .back3 {
-    width: 50%;
-    padding: 35px;
+    width: 90%;
+    padding: 20px;
   }
 
-  #input {
-    padding: 1px 10px;
+  .full {
+    width: 100%;
+  }
+
+  .table {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #input,
+  #input2,
+  #add-btn,
+  #save-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #task-list {
+    flex-direction: column;
+  }
+
+  div>h1 {
+    font-size: 32px;
   }
 
   input[type="button"] {
-    padding: 10px 10px;
-  }
-
-  #save-btn {
-    width: 50%;
-  }
-
-  #input2 {
-    padding: 5px 10px;
-    width: 60%;
+    padding: 10px;
   }
 }
